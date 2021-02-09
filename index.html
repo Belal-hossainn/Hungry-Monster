@@ -10,23 +10,55 @@
 
 </head>
 <body>
-  <main>
-    <div>
-        <div id="inputBox" class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-                aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Button</button>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hungry Monster</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#meal-full-detail">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-      <div id="foodMenu">
+    </nav>
+    <main>
+        <div>
+            <div class=" search-box input-group mb-3">
+                <input id="inputBox" type="text" class="form-control" placeholder="search meal" aria-label="search meal"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button onclick="searchFoodName()" class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+            </div>
+        </div>
+        <div id="mealDetailInfo">
 
-      </div>
-        
-         
-      
-  </main>
-<script src="app.js"></script>
+        </div>
+        <div class="menu-area">
+            <div id="meal-container">
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+    <script src="app.js"></script>
 </body>
+
 </html>
