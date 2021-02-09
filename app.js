@@ -1,10 +1,14 @@
+//get meal info by name  & search management/
 const searchFoodName = async () => {
     const searchName = document.getElementById('inputBox').value;
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchName}`
     const res = await fetch(url);
     const data = await res.json();
     displayFood(data.meals);
+    document.getElementById('inputBox').value='';
+    mealDetail.innerHTML = '';
 }
+// display meal card with name and image
 const displayFood = foods => {
     const mealContainer = document.getElementById('meal-container');
     mealContainer.innerHTML = '';
@@ -23,15 +27,15 @@ const displayFood = foods => {
 
         mealContainer.appendChild(foodDiv);
     })
-
+    
 }
-
+// call meal ingredients & fetch
 const getMealInfo = async (mealId) => {
     const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     const data = await res.json();
     showMealInfo(data.meals[0]);
 }
-
+// show single meal ingredients
 const mealDetail = document.getElementById('mealDetailInfo')
 const showMealInfo = meal => {
     mealDetailInfo = `
